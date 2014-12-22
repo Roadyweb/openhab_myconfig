@@ -149,6 +149,10 @@ Number temperatur       "Temperature [%.1f °C]" (gGF) {smarthomatic="<[deviceId
 Number temperatur2      "Temperature2 [%.1f °C]" (gGF) {smarthomatic="<[deviceId=10, messageGroupId=10, messageId=1, messagePart=0:JS(getDiv100.js)]"}
 Number helligkeit       "Brightness [%d]"  (gGF) {smarthomatic="<[deviceId=10, messageGroupId=11, messageId=1]"}
 Number batterie         "Batterie [%d]"  (gGF) {smarthomatic="<[deviceId=10, messageGroupId=0, messageId=5]"}
+Number version_major    "Version_Major [%s]"  (gGF) {smarthomatic="<[deviceId=10, messageGroupId=0, messageId=1, messagePart=0]"}
+Number version_minor    "Version_Minor [%s]"  (gGF) {smarthomatic="<[deviceId=10, messageGroupId=0, messageId=1, messagePart=1]"}
+Number version_patch    "Version_Patch [%s]"  (gGF) {smarthomatic="<[deviceId=10, messageGroupId=0, messageId=1, messagePart=2]"}
+Number version_hash     "Version_Hash [%s]"  (gGF) {smarthomatic="<[deviceId=10, messageGroupId=0, messageId=1, messagePart=3]"}
 
 Switch    Incoming_Call     "Ringing"                        (Phone)    { fritzbox="inbound" }
 Call      Active_Call       "Connected to [%1$s from %2$s]"  (Phone)    { fritzbox="active"  }
