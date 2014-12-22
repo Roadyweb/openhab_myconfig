@@ -147,7 +147,8 @@ Number NoOfPairedDevices "Paired Devices in Range: [%d]"  { bluetooth="!" }
 Number luftfeuchtigkeit "Humidity [%.1f %%]"    (gGF) {smarthomatic="<[deviceId=10, messageGroupId=10, messageId=2, messagePart=0:JS(getDiv10.js)]"}
 Number temperatur       "Temperature [%.1f °C]" (gGF) {smarthomatic="<[deviceId=10, messageGroupId=10, messageId=2, messagePart=1:JS(getDiv100.js)]"}
 Number temperatur2      "Temperature2 [%.1f °C]" (gGF) {smarthomatic="<[deviceId=10, messageGroupId=10, messageId=1, messagePart=0:JS(getDiv100.js)]"}
-Number helligkeit       "Brightness [%d]"  (gGF) {smarthomatic="<[deviceId=10, messageGroupId=11, messageId=1]"} 
+Number helligkeit       "Brightness [%d]"  (gGF) {smarthomatic="<[deviceId=10, messageGroupId=11, messageId=1]"}
+Number batterie         "Batterie [%d]"  (gGF) {smarthomatic="<[deviceId=10, messageGroupId=0, messageId=5]"}
 
 Switch    Incoming_Call     "Ringing"                        (Phone)    { fritzbox="inbound" }
 Call      Active_Call       "Connected to [%1$s from %2$s]"  (Phone)    { fritzbox="active"  }
