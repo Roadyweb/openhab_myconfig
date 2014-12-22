@@ -156,6 +156,7 @@ Number version_hash     "Version_Hash [%s]"  (gGF) {smarthomatic="<[deviceId=10,
 
 Number temperatur2      "Temperature2 [%.1f °C]"   (gGF) {smarthomatic="<[deviceId=11, messageGroupId=10, messageId=1, messagePart=0:JS(getDiv100.js)]"}
 Number luftdruck2       "Luftdruck2 [%.1f hPa]"    (gGF) {smarthomatic="<[deviceId=11, messageGroupId=10, messageId=3, messagePart=0:JS(getDiv100.js)]"}
+Number abstand2         "Abstand2 [%.1f cm]"       (gGF) {smarthomatic="<[deviceId=11, messageGroupId=11, messageId=2, messagePart=0]"}
 Number batterie2        "Batterie2 [%d]"           (gGF) {smarthomatic="<[deviceId=11, messageGroupId=0, messageId=5]"}
 Number version_major2   "Version_Major2 [%s]"      (gGF) {smarthomatic="<[deviceId=11, messageGroupId=0, messageId=1, messagePart=0]"}
 Number version_minor2   "Version_Minor2 [%s]"      (gGF) {smarthomatic="<[deviceId=11, messageGroupId=0, messageId=1, messagePart=1]"}
