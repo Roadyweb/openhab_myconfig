@@ -149,19 +149,28 @@ Number temperatur       "Temperature [%.1f °C]" (gGF) {smarthomatic="<[deviceId
 Number temperaturalt    "TemperatureAlt [%.1f °C]" (gGF) {smarthomatic="<[deviceId=10, messageGroupId=10, messageId=1, messagePart=0:JS(getDiv100.js)]"}
 Number helligkeit       "Brightness [%d]"  (gGF) {smarthomatic="<[deviceId=10, messageGroupId=11, messageId=1]"}
 Number batterie         "Batterie [%d]"  (gGF) {smarthomatic="<[deviceId=10, messageGroupId=0, messageId=5]"}
-Number version_major    "Version_Major [%s]"  (gGF) {smarthomatic="<[deviceId=10, messageGroupId=0, messageId=1, messagePart=0]"}
-Number version_minor    "Version_Minor [%s]"  (gGF) {smarthomatic="<[deviceId=10, messageGroupId=0, messageId=1, messagePart=1]"}
-Number version_patch    "Version_Patch [%s]"  (gGF) {smarthomatic="<[deviceId=10, messageGroupId=0, messageId=1, messagePart=2]"}
-Number version_hash     "Version_Hash [%s]"  (gGF) {smarthomatic="<[deviceId=10, messageGroupId=0, messageId=1, messagePart=3]"}
+Number version_major    "Version_Major [%d]"  (gGF) {smarthomatic="<[deviceId=10, messageGroupId=0, messageId=1, messagePart=0]"}
+Number version_minor    "Version_Minor [%d]"  (gGF) {smarthomatic="<[deviceId=10, messageGroupId=0, messageId=1, messagePart=1]"}
+Number version_patch    "Version_Patch [%d]"  (gGF) {smarthomatic="<[deviceId=10, messageGroupId=0, messageId=1, messagePart=2]"}
+Number version_hash     "Version_Hash [%d]"  (gGF) {smarthomatic="<[deviceId=10, messageGroupId=0, messageId=1, messagePart=3]"}
 
 Number temperatur2      "Temperature2 [%.1f °C]"   (gGF) {smarthomatic="<[deviceId=11, messageGroupId=10, messageId=1, messagePart=0:JS(getDiv100.js)]"}
 Number luftdruck2       "Luftdruck2 [%.1f hPa]"    (gGF) {smarthomatic="<[deviceId=11, messageGroupId=10, messageId=3, messagePart=0:JS(getDiv100.js)]"}
 Number abstand2         "Abstand2 [%.1f cm]"       (gGF) {smarthomatic="<[deviceId=11, messageGroupId=11, messageId=2, messagePart=0]"}
 Number batterie2        "Batterie2 [%d]"           (gGF) {smarthomatic="<[deviceId=11, messageGroupId=0, messageId=5]"}
-Number version_major2   "Version_Major2 [%s]"      (gGF) {smarthomatic="<[deviceId=11, messageGroupId=0, messageId=1, messagePart=0]"}
-Number version_minor2   "Version_Minor2 [%s]"      (gGF) {smarthomatic="<[deviceId=11, messageGroupId=0, messageId=1, messagePart=1]"}
-Number version_patch2   "Version_Patch2 [%s]"      (gGF) {smarthomatic="<[deviceId=11, messageGroupId=0, messageId=1, messagePart=2]"}
-Number version_hash2    "Version_Hash2 [%s]"       (gGF) {smarthomatic="<[deviceId=11, messageGroupId=0, messageId=1, messagePart=3]"}
+Number version_major2   "Version_Major2 [%d]"      (gGF) {smarthomatic="<[deviceId=11, messageGroupId=0, messageId=1, messagePart=0]"}
+Number version_minor2   "Version_Minor2 [%d]"      (gGF) {smarthomatic="<[deviceId=11, messageGroupId=0, messageId=1, messagePart=1]"}
+Number version_patch2   "Version_Patch2 [%d]"      (gGF) {smarthomatic="<[deviceId=11, messageGroupId=0, messageId=1, messagePart=2]"}
+Number version_hash2    "Version_Hash2 [%d]"       (gGF) {smarthomatic="<[deviceId=11, messageGroupId=0, messageId=1, messagePart=3]"}
+// Message Group GPIO (1) - Message DigitalPort (1)
+//    not supported yet, handling of arrays is missing
+Number inport1          "Inport1 [%d]"             (gGF) {smarthomatic="<[deviceId=11, messageGroupId=1, messageId=1, messagePart=0, messageItem=0]"}
+Number inport2          "Inport2 [%d]"             (gGF) {smarthomatic="<[deviceId=11, messageGroupId=1, messageId=1, messagePart=0, messageItem=1]"}
+// Message Group GPIO (1) - Message DigitalPortTimeout (2)
+//    not supported yet
+// Message Group GPIO (1) - Message DigitalPin (5)
+Number inpin_pos        "Inpin_pos [%d]"           (gGF) {smarthomatic="<[deviceId=11, messageGroupId=1, messageId=5, messagePart=0]"}
+Number inpin_on         "Inpin_on [%d]"            (gGF) {smarthomatic="<[deviceId=11, messageGroupId=1, messageId=5, messagePart=1]"}
 
 
 Switch    Incoming_Call     "Ringing"                        (Phone)    { fritzbox="inbound" }
