@@ -144,20 +144,20 @@ String UnknownDevices    "Unknown Devices in Range: [%s]" { bluetooth="?" }
 Number NoOfPairedDevices "Paired Devices in Range: [%d]"  { bluetooth="!" }
 
 
-Number luftfeuchtigkeit "Humidity [%.1f %%]"    (gGF) {smarthomatic="<[deviceId=10, messageGroupId=10, messageId=2, messagePart=0:JS(getDiv10.js)]"}
-Number temperatur       "Temperature [%.1f °C]" (gGF) {smarthomatic="<[deviceId=10, messageGroupId=10, messageId=2, messagePart=1:JS(getDiv100.js)]"}
-Number temperaturalt    "TemperatureAlt [%.1f °C]" (gGF) {smarthomatic="<[deviceId=10, messageGroupId=10, messageId=1, messagePart=0:JS(getDiv100.js)]"}
-Number helligkeit       "Brightness [%d]"  (gGF) {smarthomatic="<[deviceId=10, messageGroupId=11, messageId=1]"}
-Number batterie         "Batterie [%d]"  (gGF) {smarthomatic="<[deviceId=10, messageGroupId=0, messageId=5]"}
+Number humidity         "Humidity [%.1f %%]"    (gGF) {smarthomatic="<[deviceId=10, messageGroupId=10, messageId=2, messagePart=0:JS(getDiv10.js)]"}
+Number temperature      "Temperature [%.1f °C]" (gGF) {smarthomatic="<[deviceId=10, messageGroupId=10, messageId=2, messagePart=1:JS(getDiv100.js)]"}
+Number temperature_alt  "TemperatureAlt [%.1f °C]" (gGF) {smarthomatic="<[deviceId=10, messageGroupId=10, messageId=1, messagePart=0:JS(getDiv100.js)]"}
+Number brightness       "Brightness [%d]"  (gGF) {smarthomatic="<[deviceId=10, messageGroupId=11, messageId=1]"}
+Number battery          "Battery [%d]"  (gGF) {smarthomatic="<[deviceId=10, messageGroupId=0, messageId=5]"}
 Number version_major    "Version_Major [%d]"  (gGF) {smarthomatic="<[deviceId=10, messageGroupId=0, messageId=1, messagePart=0]"}
 Number version_minor    "Version_Minor [%d]"  (gGF) {smarthomatic="<[deviceId=10, messageGroupId=0, messageId=1, messagePart=1]"}
 Number version_patch    "Version_Patch [%d]"  (gGF) {smarthomatic="<[deviceId=10, messageGroupId=0, messageId=1, messagePart=2]"}
 Number version_hash     "Version_Hash [%d]"  (gGF) {smarthomatic="<[deviceId=10, messageGroupId=0, messageId=1, messagePart=3]"}
 
-Number temperatur2      "Temperature2 [%.1f °C]"   (gGF) {smarthomatic="<[deviceId=11, messageGroupId=10, messageId=1, messagePart=0:JS(getDiv100.js)]"}
-Number luftdruck2       "Luftdruck2 [%.1f hPa]"    (gGF) {smarthomatic="<[deviceId=11, messageGroupId=10, messageId=3, messagePart=0:JS(getDiv100.js)]"}
-Number abstand2         "Abstand2 [%.1f cm]"       (gGF) {smarthomatic="<[deviceId=11, messageGroupId=11, messageId=2, messagePart=0]"}
-Number batterie2        "Batterie2 [%d]"           (gGF) {smarthomatic="<[deviceId=11, messageGroupId=0, messageId=5]"}
+Number temperature2     "Temperature2 [%.1f °C]"   (gGF) {smarthomatic="<[deviceId=11, messageGroupId=10, messageId=1, messagePart=0:JS(getDiv100.js)]"}
+Number pressure2        "Pressure2 [%.1f hPa]"    (gGF) {smarthomatic="<[deviceId=11, messageGroupId=10, messageId=3, messagePart=0:JS(getDiv100.js)]"}
+Number distance         "Distance2 [%.1f cm]"       (gGF) {smarthomatic="<[deviceId=11, messageGroupId=11, messageId=2, messagePart=0]"}
+Number batterie2        "Battery2 [%d]"           (gGF) {smarthomatic="<[deviceId=11, messageGroupId=0, messageId=5]"}
 Number version_major2   "Version_Major2 [%d]"      (gGF) {smarthomatic="<[deviceId=11, messageGroupId=0, messageId=1, messagePart=0]"}
 Number version_minor2   "Version_Minor2 [%d]"      (gGF) {smarthomatic="<[deviceId=11, messageGroupId=0, messageId=1, messagePart=1]"}
 Number version_patch2   "Version_Patch2 [%d]"      (gGF) {smarthomatic="<[deviceId=11, messageGroupId=0, messageId=1, messagePart=2]"}
