@@ -7,7 +7,8 @@ sitemap demo label="Main Menu"
 		Group item=Outdoor icon="garden" 
 		Group item=gS1 label="TestSensor1" 
 		Group item=gS2 label="TestSensor2" 
-		Group item=gS2I label="TestSensor2 inputs" 
+        Group item=gS2I label="TestSensor2 Inputs" 
+        Group item=gS3 label="TestSensor3 RGB_Dimmer" 
 	}
 	Frame label="Weather" {
 		Text item=Weather_Temperature valuecolor=[Weather_LastUpdate=="Uninitialized"="lightgray",Weather_LastUpdate>90="lightgray",>25="orange",>15="green",>5="orange",<=5="blue"] {

@@ -10,6 +10,7 @@ Group Status 	(All)
 Group gS1       (All)
 Group gS2       (All)
 Group gS2I      (All)  // Inputs of test device 2
+Group gS3       (All)  // RGB Dimmer
 
 Group GF_Living 	"Living Room" 	<video> 	(gGF)
 Group GF_Kitchen 	"Kitchen" 		<kitchen> 	(gGF)
@@ -190,6 +191,8 @@ Number ana2_volt        "Analog2_Volt [%d]"        (gS2I) {smarthomatic="<[devic
 Switch ana3_on          "Analog3_ON [%d]"          (gS2I) {smarthomatic="<[deviceId=11, messageGroupId=1, messageId=10, messagePart=4]"}
 Number ana3_volt        "Analog3_Volt [%d]"        (gS2I) {smarthomatic="<[deviceId=11, messageGroupId=1, messageId=10, messagePart=5]"}
 
+// Message Group Dimmer (60) - Message Color (10)
+Number rgb_color        "RGB Color [%d]"           (gS3) {smarthomatic="<[deviceId=12, messageGroupId=60, messageId=10, messagePart=0]"}
 
 Switch    Incoming_Call     "Ringing"                        (Phone)    { fritzbox="inbound" }
 Call      Active_Call       "Connected to [%1$s from %2$s]"  (Phone)    { fritzbox="active"  }
