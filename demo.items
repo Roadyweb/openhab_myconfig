@@ -7,6 +7,10 @@ Group Shutters 	(All)
 Group Weather 	(All)
 Group Status 	(All)
 
+Group gS1       (All)
+Group gS2       (All)
+Group gS2I      (All)  // Inputs of test device 2
+
 Group GF_Living 	"Living Room" 	<video> 	(gGF)
 Group GF_Kitchen 	"Kitchen" 		<kitchen> 	(gGF)
 Group GF_Toilet 	"Toilet" 		<bath> 		(gGF)
@@ -144,44 +148,47 @@ String UnknownDevices    "Unknown Devices in Range: [%s]" { bluetooth="?" }
 Number NoOfPairedDevices "Paired Devices in Range: [%d]"  { bluetooth="!" }
 
 
-Number humidity         "Humidity [%.1f %%]"    (gGF) {smarthomatic="<[deviceId=10, messageGroupId=10, messageId=2, messagePart=0:JS(getDiv10.js)]"}
-Number temperature      "Temperature [%.1f °C]" (gGF) {smarthomatic="<[deviceId=10, messageGroupId=10, messageId=2, messagePart=1:JS(getDiv100.js)]"}
-Number temperature_alt  "TemperatureAlt [%.1f °C]" (gGF) {smarthomatic="<[deviceId=10, messageGroupId=10, messageId=1, messagePart=0:JS(getDiv100.js)]"}
-Number brightness       "Brightness [%d]"  (gGF) {smarthomatic="<[deviceId=10, messageGroupId=11, messageId=1]"}
-Number battery          "Battery [%d]"  (gGF) {smarthomatic="<[deviceId=10, messageGroupId=0, messageId=5]"}
-Number version_major    "Version_Major [%d]"  (gGF) {smarthomatic="<[deviceId=10, messageGroupId=0, messageId=1, messagePart=0]"}
-Number version_minor    "Version_Minor [%d]"  (gGF) {smarthomatic="<[deviceId=10, messageGroupId=0, messageId=1, messagePart=1]"}
-Number version_patch    "Version_Patch [%d]"  (gGF) {smarthomatic="<[deviceId=10, messageGroupId=0, messageId=1, messagePart=2]"}
-Number version_hash     "Version_Hash [%d]"  (gGF) {smarthomatic="<[deviceId=10, messageGroupId=0, messageId=1, messagePart=3]"}
+Number humidity         "Humidity [%.1f %%]"       (gS1) {smarthomatic="<[deviceId=10, messageGroupId=10, messageId=2, messagePart=0:JS(getDiv10.js)]"}
+Number temperature      "Temperature [%.1f °C]"    (gS1) {smarthomatic="<[deviceId=10, messageGroupId=10, messageId=2, messagePart=1:JS(getDiv100.js)]"}
+Number temperature_alt  "TemperatureAlt [%.1f °C]" (gS1) {smarthomatic="<[deviceId=10, messageGroupId=10, messageId=1, messagePart=0:JS(getDiv100.js)]"}
+Number brightness       "Brightness [%d]"          (gS1) {smarthomatic="<[deviceId=10, messageGroupId=11, messageId=1]"}
+Number battery          "Battery [%d]"             (gS1) {smarthomatic="<[deviceId=10, messageGroupId=0, messageId=5]"}
+Number version_major    "Version_Major [%d]"       (gS1) {smarthomatic="<[deviceId=10, messageGroupId=0, messageId=1, messagePart=0]"}
+Number version_minor    "Version_Minor [%d]"       (gS1) {smarthomatic="<[deviceId=10, messageGroupId=0, messageId=1, messagePart=1]"}
+Number version_patch    "Version_Patch [%d]"       (gS1) {smarthomatic="<[deviceId=10, messageGroupId=0, messageId=1, messagePart=2]"}
+Number version_hash     "Version_Hash [%d]"        (gS1) {smarthomatic="<[deviceId=10, messageGroupId=0, messageId=1, messagePart=3]"}
 
-Number temperature2     "Temperature2 [%.1f °C]"   (gGF) {smarthomatic="<[deviceId=11, messageGroupId=10, messageId=1, messagePart=0:JS(getDiv100.js)]"}
-Number pressure2        "Pressure2 [%.1f hPa]"    (gGF) {smarthomatic="<[deviceId=11, messageGroupId=10, messageId=3, messagePart=0:JS(getDiv100.js)]"}
-Number distance         "Distance2 [%.1f cm]"       (gGF) {smarthomatic="<[deviceId=11, messageGroupId=11, messageId=2, messagePart=0]"}
-Number batterie2        "Battery2 [%d]"           (gGF) {smarthomatic="<[deviceId=11, messageGroupId=0, messageId=5]"}
-Number version_major2   "Version_Major2 [%d]"      (gGF) {smarthomatic="<[deviceId=11, messageGroupId=0, messageId=1, messagePart=0]"}
-Number version_minor2   "Version_Minor2 [%d]"      (gGF) {smarthomatic="<[deviceId=11, messageGroupId=0, messageId=1, messagePart=1]"}
-Number version_patch2   "Version_Patch2 [%d]"      (gGF) {smarthomatic="<[deviceId=11, messageGroupId=0, messageId=1, messagePart=2]"}
-Number version_hash2    "Version_Hash2 [%d]"       (gGF) {smarthomatic="<[deviceId=11, messageGroupId=0, messageId=1, messagePart=3]"}
+Number temperature2     "Temperature2 [%.1f °C]"   (gS2) {smarthomatic="<[deviceId=11, messageGroupId=10, messageId=1, messagePart=0:JS(getDiv100.js)]"}
+Number pressure2        "Pressure2 [%.1f hPa]"     (gS2) {smarthomatic="<[deviceId=11, messageGroupId=10, messageId=3, messagePart=0:JS(getDiv100.js)]"}
+Number distance         "Distance2 [%.1f cm]"      (gS2) {smarthomatic="<[deviceId=11, messageGroupId=11, messageId=2, messagePart=0]"}
+Number batterie2        "Battery2 [%d]"            (gS2) {smarthomatic="<[deviceId=11, messageGroupId=0, messageId=5]"}
+Number version_major2   "Version_Major2 [%d]"      (gS2) {smarthomatic="<[deviceId=11, messageGroupId=0, messageId=1, messagePart=0]"}
+Number version_minor2   "Version_Minor2 [%d]"      (gS2) {smarthomatic="<[deviceId=11, messageGroupId=0, messageId=1, messagePart=1]"}
+Number version_patch2   "Version_Patch2 [%d]"      (gS2) {smarthomatic="<[deviceId=11, messageGroupId=0, messageId=1, messagePart=2]"}
+Number version_hash2    "Version_Hash2 [%d]"       (gS2) {smarthomatic="<[deviceId=11, messageGroupId=0, messageId=1, messagePart=3]"}
 
 // Message Group GPIO (1) - Message DigitalPort (1)
-Switch inport1          "Inport1 [%d]"             (gGF) {smarthomatic="<[deviceId=11, messageGroupId=1, messageId=1, messagePart=0]"}
-Switch inport2          "Inport2 [%d]"             (gGF) {smarthomatic="<[deviceId=11, messageGroupId=1, messageId=1, messagePart=1]"}
-Switch inport3          "Inport3 [%d]"             (gGF) {smarthomatic="<[deviceId=11, messageGroupId=1, messageId=1, messagePart=2]"}
-Switch inport4          "Inport4 [%d]"             (gGF) {smarthomatic="<[deviceId=11, messageGroupId=1, messageId=1, messagePart=3]"}
-Switch inport5          "Inport5 [%d]"             (gGF) {smarthomatic="<[deviceId=11, messageGroupId=1, messageId=1, messagePart=4]"}
+Switch inport1          "Inport1 [%d]"             (gS2I) {smarthomatic="<[deviceId=11, messageGroupId=1, messageId=1, messagePart=0]"}
+Switch inport2          "Inport2 [%d]"             (gS2I) {smarthomatic="<[deviceId=11, messageGroupId=1, messageId=1, messagePart=1]"}
+Switch inport3          "Inport3 [%d]"             (gS2I) {smarthomatic="<[deviceId=11, messageGroupId=1, messageId=1, messagePart=2]"}
+Switch inport4          "Inport4 [%d]"             (gS2I) {smarthomatic="<[deviceId=11, messageGroupId=1, messageId=1, messagePart=3]"}
+Switch inport5          "Inport5 [%d]"             (gS2I) {smarthomatic="<[deviceId=11, messageGroupId=1, messageId=1, messagePart=4]"}
+
 // Message Group GPIO (1) - Message DigitalPortTimeout (2)
-//    not supported yet
+Switch inport1_on          "Inport1_ON [%d]"       (gS2I) {smarthomatic="<[deviceId=11, messageGroupId=1, messageId=2, messagePart=0]"}
+Number inport1_timeout     "Inport1_Timeout [%d]"  (gS2I) {smarthomatic="<[deviceId=11, messageGroupId=1, messageId=2, messagePart=1]"}
+
 // Message Group GPIO (1) - Message DigitalPin (5)
-Number inpin_pos        "Inpin_pos [%d]"           (gGF) {smarthomatic="<[deviceId=11, messageGroupId=1, messageId=5, messagePart=0]"}
-Number inpin_on         "Inpin_on [%d]"            (gGF) {smarthomatic="<[deviceId=11, messageGroupId=1, messageId=5, messagePart=1]"}
+Number inpin_pos        "Inpin_pos [%d]"           (gS2I) {smarthomatic="<[deviceId=11, messageGroupId=1, messageId=5, messagePart=0]"}
+Number inpin_on         "Inpin_on [%d]"            (gS2I) {smarthomatic="<[deviceId=11, messageGroupId=1, messageId=5, messagePart=1]"}
 
 // Message Group GPIO (1) - Message AnalogPort (10)
-Switch ana1_on          "Analog1_ON [%d]"          (gGF) {smarthomatic="<[deviceId=11, messageGroupId=1, messageId=10, messagePart=0]"}
-Number ana1_volt        "Analog1_Volt [%d]"        (gGF) {smarthomatic="<[deviceId=11, messageGroupId=1, messageId=10, messagePart=1]"}
-Switch ana2_on          "Analog2_ON [%d]"          (gGF) {smarthomatic="<[deviceId=11, messageGroupId=1, messageId=10, messagePart=2]"}
-Number ana2_volt        "Analog2_Volt [%d]"        (gGF) {smarthomatic="<[deviceId=11, messageGroupId=1, messageId=10, messagePart=3]"}
-Switch ana3_on          "Analog3_ON [%d]"          (gGF) {smarthomatic="<[deviceId=11, messageGroupId=1, messageId=10, messagePart=4]"}
-Number ana3_volt        "Analog3_Volt [%d]"        (gGF) {smarthomatic="<[deviceId=11, messageGroupId=1, messageId=10, messagePart=5]"}
+Switch ana1_on          "Analog1_ON [%d]"          (gS2I) {smarthomatic="<[deviceId=11, messageGroupId=1, messageId=10, messagePart=0]"}
+Number ana1_volt        "Analog1_Volt [%d]"        (gS2I) {smarthomatic="<[deviceId=11, messageGroupId=1, messageId=10, messagePart=1]"}
+Switch ana2_on          "Analog2_ON [%d]"          (gS2I) {smarthomatic="<[deviceId=11, messageGroupId=1, messageId=10, messagePart=2]"}
+Number ana2_volt        "Analog2_Volt [%d]"        (gS2I) {smarthomatic="<[deviceId=11, messageGroupId=1, messageId=10, messagePart=3]"}
+Switch ana3_on          "Analog3_ON [%d]"          (gS2I) {smarthomatic="<[deviceId=11, messageGroupId=1, messageId=10, messagePart=4]"}
+Number ana3_volt        "Analog3_Volt [%d]"        (gS2I) {smarthomatic="<[deviceId=11, messageGroupId=1, messageId=10, messagePart=5]"}
 
 
 Switch    Incoming_Call     "Ringing"                        (Phone)    { fritzbox="inbound" }
