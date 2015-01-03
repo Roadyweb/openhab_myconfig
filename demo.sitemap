@@ -7,8 +7,15 @@ sitemap demo label="Main Menu"
 		Group item=Outdoor icon="garden" 
 		Group item=gS1 label="TestSensor1" 
 		Group item=gS2 label="TestSensor2" 
-        Group item=gS2I label="TestSensor2 Inputs" 
-        Group item=gS3 label="TestSensor3 RGB_Dimmer" 
+		Group item=gS2I label="TestSensor2 Inputs" 
+		Group item=gS3 label="TestSensor3 RGB_Dimmer"
+		Group item=gS4 label="TestSensor3 Dimmer"
+	}
+	Frame label="Control Test Devices" {
+		Selection item=dim_brightness label="Dimmer Brightness Selection" mappings=[0=off, 10=10_percent, 20=20_percent, 50=50_percent, 70=70_percent, 100=on]
+		Setpoint item=dim_brightness label="Dimmer Brightness Setpoint" minValue="0" maxValue="100" step="5"
+		Slider item=dim_brightness label="Dimmer Brightness Slider"
+		Colorpicker item=rgb_color
 	}
 	Frame label="Weather" {
 		Text item=Weather_Temperature valuecolor=[Weather_LastUpdate=="Uninitialized"="lightgray",Weather_LastUpdate>90="lightgray",>25="orange",>15="green",>5="orange",<=5="blue"] {
