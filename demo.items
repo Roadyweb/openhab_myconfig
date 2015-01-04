@@ -195,6 +195,11 @@ Number ana3_volt        "Analog3_Volt [%d]"        (gS2I) {smarthomatic="<[devic
 
 // Message Group Dimmer (60) - Message Brightness (1)
 Number dim_brightness   "Dimmer Brightness [%d]"   (gS4) {smarthomatic="=[deviceId=13, messageGroupId=60, messageId=1]"}
+Number dim_animode      "Dimmer AniMode [%d]"      (gS4) {smarthomatic="<[deviceId=13, messageGroupId=60, messageId=2, messagePart=0]"}
+Number dim_timeout      "Dimmer Timeout [%d s]"    (gS4) {smarthomatic="<[deviceId=13, messageGroupId=60, messageId=2, messagePart=1]"}
+Number dim_startbright  "Dimmer StartBright [%d]"  (gS4) {smarthomatic="<[deviceId=13, messageGroupId=60, messageId=2, messagePart=2]"}
+Number dim_endbright    "Dimmer EndBright [%d]"    (gS4) {smarthomatic="<[deviceId=13, messageGroupId=60, messageId=2, messagePart=3]"}
+Number dim_aniset       "Dimmer AniSet [%s]"       (gS4) {smarthomatic="=[deviceId=13, messageGroupId=60, messageId=2]"}
 
 // Message Group Dimmer (60) - Message Color (10)
 Color rgb_color        "RGB Color [%d]"            (gS3) {smarthomatic="=[deviceId=12, messageGroupId=60, messageId=10]"}

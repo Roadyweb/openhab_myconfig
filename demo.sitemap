@@ -12,9 +12,9 @@ sitemap demo label="Main Menu"
 		Group item=gS4 label="TestSensor3 Dimmer"
 	}
 	Frame label="Control Test Devices" {
-		Selection item=dim_brightness label="Dimmer Brightness Selection" mappings=[0=off, 10=10_percent, 20=20_percent, 50=50_percent, 70=70_percent, 100=on]
-		Setpoint item=dim_brightness label="Dimmer Brightness Setpoint" minValue="0" maxValue="100" step="5"
-		Slider item=dim_brightness label="Dimmer Brightness Slider"
+		Selection item=dim_brightness label="Dimmer Brightness Selection" mappings=[0="Off", 25="25 %", 50="50 %", 75="75 %", 100="On"]
+		Setpoint item=dim_brightness label="Dimmer Brightness Setpoint [%d]" minValue=0 maxValue=100 step=5
+		Selection item=dim_aniset label="Dimmer Animation Selection" mappings=[1073774688="2 Seconds", 1073807456="4 Seconds", 1073872992="8 Seconds", 1074004064="16 Seconds", 1074266208="32 Seconds"]
 		Colorpicker item=rgb_color
 	}
 	Frame label="Weather" {
