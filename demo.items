@@ -202,7 +202,13 @@ Number dim_endbright    "Dimmer EndBright [%d]"    (gS4) {smarthomatic="<[device
 Number dim_aniset       "Dimmer AniSet [%s]"       (gS4) {smarthomatic="=[deviceId=13, messageGroupId=60, messageId=2]"}
 
 // Message Group Dimmer (60) - Message Color (10)
-Color rgb_color        "RGB Color [%d]"            (gS3) {smarthomatic="=[deviceId=12, messageGroupId=60, messageId=10]"}
+Number rgb_color_num    "RGB Color [%d]"           (gS3) {smarthomatic=">[deviceId=12, messageGroupId=60, messageId=10]"}
+Color rgb_color_color   "RGB Color"                (gS3) {smarthomatic=">[deviceId=12, messageGroupId=60, messageId=10]"}
+Number version_major3   "Version_Major3 [%d]"      (gS3) {smarthomatic="<[deviceId=12, messageGroupId=0, messageId=1, messagePart=0]"}
+Number version_minor3   "Version_Minor3 [%d]"      (gS3) {smarthomatic="<[deviceId=12, messageGroupId=0, messageId=1, messagePart=1]"}
+Number version_patch3   "Version_Patch3 [%d]"      (gS3) {smarthomatic="<[deviceId=12, messageGroupId=0, messageId=1, messagePart=2]"}
+Number version_hash3    "Version_Hash3 [%d]"       (gS3) {smarthomatic="<[deviceId=12, messageGroupId=0, messageId=1, messagePart=3]"}
+
 
 Switch    Incoming_Call     "Ringing"                        (Phone)    { fritzbox="inbound" }
 Call      Active_Call       "Connected to [%1$s from %2$s]"  (Phone)    { fritzbox="active"  }
