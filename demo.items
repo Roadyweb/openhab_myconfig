@@ -202,8 +202,21 @@ Number dim_endbright    "Dimmer EndBright [%d]"    (gS4) {smarthomatic="<[device
 Number dim_aniset       "Dimmer AniSet [%s]"       (gS4) {smarthomatic="=[deviceId=13, messageGroupId=60, messageId=2]"}
 
 // Message Group Dimmer (60) - Message Color (10)
-Number rgb_color_num    "RGB Color [%d]"           (gS3) {smarthomatic=">[deviceId=12, messageGroupId=60, messageId=10]"}
-Color rgb_color_color   "RGB Color"                (gS3) {smarthomatic=">[deviceId=12, messageGroupId=60, messageId=10]"}
+// Number rgb_color_num    "RGB Color [%d]"           (gS3) {smarthomatic="=[deviceId=12, messageGroupId=60, messageId=10]"}
+Color rgb_color_color   "RGB Color"                (gS3) {smarthomatic="=[deviceId=12, messageGroupId=60, messageId=10]"}
+Number rgb_repeat       "RGB Ani Repeat [%d]"      (gS3) {smarthomatic="=[deviceId=12, messageGroupId=60, messageId=11, messagePart=0]"}
+Switch rgb_autoreverse  "RGB Ani Autoreverse"      (gS3) {smarthomatic="=[deviceId=12, messageGroupId=60, messageId=11, messagePart=1]"}
+Number rgb_time0        "RGB Ani Time0 [%d]"       (gS3) {smarthomatic="=[deviceId=12, messageGroupId=60, messageId=11, messagePart=2]"}
+Number rgb_color0       "RGB Ani Color0 [%d]"      (gS3) {smarthomatic="=[deviceId=12, messageGroupId=60, messageId=11, messagePart=3]"}
+Number rgb_time1        "RGB Ani Time1 [%d]"       (gS3) {smarthomatic="=[deviceId=12, messageGroupId=60, messageId=11, messagePart=4]"}
+Number rgb_color1       "RGB Ani Color1 [%d]"      (gS3) {smarthomatic="=[deviceId=12, messageGroupId=60, messageId=11, messagePart=5]"}
+Number rgb_time2        "RGB Ani Time2 [%d]"       (gS3) {smarthomatic="=[deviceId=12, messageGroupId=60, messageId=11, messagePart=6]"}
+Number rgb_color2       "RGB Ani Color2 [%d]"      (gS3) {smarthomatic="=[deviceId=12, messageGroupId=60, messageId=11, messagePart=7]"}
+Number rgb_time3        "RGB Ani Time3 [%d]"       (gS3) {smarthomatic="=[deviceId=12, messageGroupId=60, messageId=11, messagePart=8]"}
+Number rgb_color3       "RGB Ani Color3 [%d]"      (gS3) {smarthomatic="=[deviceId=12, messageGroupId=60, messageId=11, messagePart=9]"}
+Number rgb_time4        "RGB Ani Time4 [%d]"       (gS3) {smarthomatic="=[deviceId=12, messageGroupId=60, messageId=11, messagePart=10]"}
+Number rgb_color4       "RGB Ani Color4 [%d]"      (gS3) {smarthomatic="=[deviceId=12, messageGroupId=60, messageId=11, messagePart=11]"}
+Number rgb_color_aniset "RGB Animation"            (gS3) {smarthomatic="=[deviceId=12, messageGroupId=60, messageId=11]"}
 Number version_major3   "Version_Major3 [%d]"      (gS3) {smarthomatic="<[deviceId=12, messageGroupId=0, messageId=1, messagePart=0]"}
 Number version_minor3   "Version_Minor3 [%d]"      (gS3) {smarthomatic="<[deviceId=12, messageGroupId=0, messageId=1, messagePart=1]"}
 Number version_patch3   "Version_Patch3 [%d]"      (gS3) {smarthomatic="<[deviceId=12, messageGroupId=0, messageId=1, messagePart=2]"}

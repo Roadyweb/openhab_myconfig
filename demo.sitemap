@@ -15,8 +15,14 @@ sitemap demo label="Main Menu"
 		Selection item=dim_brightness label="Dimmer Brightness Selection" mappings=[0="Off", 25="25 %", 50="50 %", 75="75 %", 100="On"]
 		Setpoint item=dim_brightness label="Dimmer Brightness Setpoint [%d]" minValue=0 maxValue=100 step=5
 		Selection item=dim_aniset label="Dimmer Animation Selection" mappings=[1073774688="2 Seconds", 1073807456="4 Seconds", 1073872992="8 Seconds", 1074004064="16 Seconds", 1074266208="32 Seconds"]
-		Selection item=rgb_color_num label="RGB Dimmer Color Selection" mappings=[0="Off", 48="Red", 12="Green", 3="Blue", 63="All on"]
+		// Selection item=rgb_color_num label="RGB Dimmer Color Selection" mappings=[0="Off", 48="Red", 12="Green", 3="Blue", 63="All on"]
 		Colorpicker item=rgb_color_color label="RGB Dimmer Color Colorpicker"
+		Selection item=rgb_color_aniset label="RGB Dimmer Animation Selection" 
+			mappings=[9536012="once Red-Green 1s",
+					  9462275="once Green-Blue 1s",
+					  9443888="once Blue-Red 1s",
+					  5267980="infinite Red-Green autoreverse 1s",
+					  68182540="8 x Red Green 1s"]
 	}
 	Frame label="Weather" {
 		Text item=Weather_Temperature valuecolor=[Weather_LastUpdate=="Uninitialized"="lightgray",Weather_LastUpdate>90="lightgray",>25="orange",>15="green",>5="orange",<=5="blue"] {
