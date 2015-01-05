@@ -12,6 +12,7 @@ Group gS2       (All)
 Group gS2I      (All)  // Inputs of test device 2
 Group gS3       (All)  // RGB Dimmer device
 Group gS4       (All)  // Dimmer device
+Group gS5       (All)  // Powerswitch device
 
 Group GF_Living 	"Living Room" 	<video> 	(gGF)
 Group GF_Kitchen 	"Kitchen" 		<kitchen> 	(gGF)
@@ -222,6 +223,27 @@ Number version_minor3   "Version_Minor3 [%d]"      (gS3) {smarthomatic="<[device
 Number version_patch3   "Version_Patch3 [%d]"      (gS3) {smarthomatic="<[deviceId=12, messageGroupId=0, messageId=1, messagePart=2]"}
 Number version_hash3    "Version_Hash3 [%d]"       (gS3) {smarthomatic="<[deviceId=12, messageGroupId=0, messageId=1, messagePart=3]"}
 
+// Powerswitch
+Switch outport1_on          "Outport1_ON [%d]"       (gS5) {smarthomatic="<[deviceId=14, messageGroupId=1, messageId=2, messagePart=0]"}
+Number outport1_timeout     "Outport1_Timeout [%d]"  (gS5) {smarthomatic="<[deviceId=14, messageGroupId=1, messageId=2, messagePart=1]"}
+Switch outport2_on          "Outport2_ON [%d]"       (gS5) {smarthomatic="<[deviceId=14, messageGroupId=1, messageId=2, messagePart=2]"}
+Number outport2_timeout     "Outport2_Timeout [%d]"  (gS5) {smarthomatic="<[deviceId=14, messageGroupId=1, messageId=2, messagePart=3]"}
+Switch outport3_on          "Outport3_ON [%d]"       (gS5) {smarthomatic="<[deviceId=14, messageGroupId=1, messageId=2, messagePart=4]"}
+Number outport3_timeout     "Outport3_Timeout [%d]"  (gS5) {smarthomatic="<[deviceId=14, messageGroupId=1, messageId=2, messagePart=5]"}
+Switch outport4_on          "Outport4_ON [%d]"       (gS5) {smarthomatic="<[deviceId=14, messageGroupId=1, messageId=2, messagePart=6]"}
+Number outport4_timeout     "Outport4_Timeout [%d]"  (gS5) {smarthomatic="<[deviceId=14, messageGroupId=1, messageId=2, messagePart=7]"}
+Switch outport5_on          "Outport5_ON [%d]"       (gS5) {smarthomatic="<[deviceId=14, messageGroupId=1, messageId=2, messagePart=8]"}
+Number outport5_timeout     "Outport5_Timeout [%d]"  (gS5) {smarthomatic="<[deviceId=14, messageGroupId=1, messageId=2, messagePart=9]"}
+Switch outport6_on          "Outport6_ON [%d]"       (gS5) {smarthomatic="<[deviceId=14, messageGroupId=1, messageId=2, messagePart=10]"}
+Number outport6_timeout     "Outport6_Timeout [%d]"  (gS5) {smarthomatic="<[deviceId=14, messageGroupId=1, messageId=2, messagePart=11]"}
+Number outport_set          "Outport Set [%d]"       (gS5) {smarthomatic=">[deviceId=14, messageGroupId=1, messageId=1]"}
+Number outpin_set           "Outpin Set [%d]"        (gS5) {smarthomatic=">[deviceId=14, messageGroupId=1, messageId=5]"}
+Number outpin_timeout_set   "Outpin Timeout Set [%d]"(gS5) {smarthomatic=">[deviceId=14, messageGroupId=1, messageId=6]"}
+
+Number version_major5   "Version_Major5 [%d]"      (gS5) {smarthomatic="<[deviceId=14, messageGroupId=0, messageId=1, messagePart=0]"}
+Number version_minor5   "Version_Minor5 [%d]"      (gS5) {smarthomatic="<[deviceId=14, messageGroupId=0, messageId=1, messagePart=1]"}
+Number version_patch5   "Version_Patch5 [%d]"      (gS5) {smarthomatic="<[deviceId=14, messageGroupId=0, messageId=1, messagePart=2]"}
+Number version_hash5    "Version_Hash5 [%d]"       (gS5) {smarthomatic="<[deviceId=14, messageGroupId=0, messageId=1, messagePart=3]"}
 
 Switch    Incoming_Call     "Ringing"                        (Phone)    { fritzbox="inbound" }
 Call      Active_Call       "Connected to [%1$s from %2$s]"  (Phone)    { fritzbox="active"  }

@@ -10,6 +10,7 @@ sitemap demo label="Main Menu"
 		Group item=gS2I label="TestSensor2 Inputs"
 		Group item=gS4 label="TestSensor3 Dimmer"
 		Group item=gS3 label="TestSensor3 RGB_Dimmer"
+		Group item=gS5 label="TestSensor4 Powerswitch"
 	}
 	Frame label="Control Test Devices" {
 		Selection item=dim_brightness label="Dimmer Brightness Selection" mappings=[0="Off", 25="25 %", 50="50 %", 75="75 %", 100="On"]
@@ -23,6 +24,17 @@ sitemap demo label="Main Menu"
 					  9443888="once Blue-Red 1s",
 					  5267980="infinite Red-Green autoreverse 1s",
 					  68182540="8 x Red Green 1s"]
+		Selection item=outport_set label="Powerswitch Set Port" 
+			mappings=[255="All ON", 0="All OFF"]
+		Selection item=outpin_set label="Powerswitch Set Pin" 
+			mappings=[0="Pin1 Off", 1="Pin1 On", 2="Pin2 Off", 3="Pin2 On"]
+		Selection item=outpin_timeout_set label="Powerswitch Set Pin with Timeout"
+			mappings=[65544= "Pin1 On for 8 s",
+					  196616="Pin2 On for 8 s",
+					  327688="Pin3 On for 8 s",
+					  458880="Pin4 On for 128 s",
+					  590080="Pin5 On for 256 s",
+					  721408="Pin6 On for 512 s"]
 	}
 	Frame label="Weather" {
 		Text item=Weather_Temperature valuecolor=[Weather_LastUpdate=="Uninitialized"="lightgray",Weather_LastUpdate>90="lightgray",>25="orange",>15="green",>5="orange",<=5="blue"] {
